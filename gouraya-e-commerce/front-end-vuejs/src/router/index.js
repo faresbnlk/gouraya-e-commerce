@@ -13,6 +13,7 @@ import LogIn from '../views/LogIn.vue'
 import MyAccount from '../views/MyAccount.vue'
 import Checkout from '../views/Checkout.vue'
 import Success from '../views/Success.vue'
+import RecommandedProducts from '../views/RecommandedProducts.vue'
 
 const routes = [
   {
@@ -50,6 +51,11 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: Search
+  },
+  {
+    path: '/rec-products',
+    name: 'RecommandedProducts',
+    component: RecommandedProducts
   },
   {
     path: '/cart',

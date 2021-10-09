@@ -19,6 +19,7 @@
 import axios from 'axios'
 import ProductBox from '@/components/ProductBox.vue'
 
+
 export default {
     name: 'Search',
     components: {
@@ -26,6 +27,7 @@ export default {
     },
     data() {
         return {
+            searchedProducts: [],
             products: [],
             query: ''
         }
@@ -45,17 +47,31 @@ export default {
     methods: {
         async performSearch() {
             this.$store.commit('setIsLoading', true)
-
+            console.log("test")
             await axios
                 .post('/api/v1/products/search/', {'query': this.query})
                 .then(response => {
                     this.products = response.data
+                    console.log(localStorage.getItem("userid"))
+
+                    if (response.data.length === 0){
+                      console.log('no product found !')
+                    }
+                    else {
+                      this.searchedProducts.push(this.query)
+                      if (localStorage.getItem("searchedProducts") === null){
+                          localStorage.setItem("searchedProducts",this.query)
+                      }
+                      else {
+                        localStorage.setItem("searchedProducts",localStorage.getItem("searchedProducts").concat(',').concat(this.query))
+                      }
+                    }
                 })
                 .catch(error => {
                     console.log(error)
                 })
-
             this.$store.commit('setIsLoading', false)
+
         }
     }
 }

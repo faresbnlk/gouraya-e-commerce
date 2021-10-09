@@ -15,9 +15,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -28,6 +34,7 @@
       <option name="presentableId" value="Default" />
       <updated>1633087728090</updated>
       <workItem from="1633087729267" duration="1134000" />
+      <workItem from="1633356421916" duration="8767000" />
     </task>
     <servers />
   </component>
@@ -35,9 +42,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="332" y="126" width="615" height="548" key="find.popup" timestamp="1633089899702">
+    <state x="332" y="126" width="615" height="548" key="find.popup" timestamp="1633447159243">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="332" y="126" width="615" height="548" key="find.popup/1280.-79.1920.1080/0.0.1280.800@0.0.1280.800" timestamp="1633089899702" />
+    <state x="332" y="126" width="615" height="548" key="find.popup/1280.-79.1920.1080/0.0.1280.800@0.0.1280.800" timestamp="1633447159243" />
   </component>
 </project>

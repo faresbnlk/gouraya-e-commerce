@@ -37,6 +37,7 @@
             <div class="buttons">
               <template v-if="$store.state.isAuthenticated">
                 <router-link to="/my-account" class="button is-light">My account</router-link>
+                <router-link to="/rec-products" class="button is-light">For Me</router-link>
               </template>
 
               <template v-else>
