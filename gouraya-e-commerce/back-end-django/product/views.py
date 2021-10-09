@@ -20,13 +20,17 @@ class LatestProductsList(APIView):
 
 @api_view(['POST'])
 def recommandedProducts(request):
-    query = list(set(request.data.get('query', '').lower().split(",")))
     recommandedProducts = []
-    print(query)
-    for p in Product.objects.all():
-        if p.category.name.lower() in query or p.name.lower() in query or p.description.split(" ").__getitem__(0) in query:
-            recommandedProducts.append(p)
-    serializer = ProductSerializer(recommandedProducts, many=True)
+    if len(request.data.get('query', '')) > 0:
+        query = list(set(request.data.get('query', '').lower().split(",")))
+
+        for p in Product.objects.all():
+            for q in query:
+                if q.__contains__(p.name.lower()) or q.__contains__(p.category.name.lower()) or q.__contains__(p.description.split(" ").__getitem__(0).lower()):
+                    recommandedProducts.append(p)
+                if p.name.lower().__contains__(q) or p.category.name.lower().__contains__(q) or p.description.split(" ").__getitem__(0).lower().__contains__(q):
+                    recommandedProducts.append(p)
+        serializer = ProductSerializer(list(set(recommandedProducts))[0:6], many=True)
     return Response(serializer.data)
 
 

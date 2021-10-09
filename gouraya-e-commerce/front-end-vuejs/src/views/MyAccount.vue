@@ -50,7 +50,7 @@ export default {
             localStorage.removeItem("token")
             localStorage.removeItem("username")
             localStorage.removeItem("userid")
-
+            localStorage.removeItem("searchedProducts")
             this.$store.commit('removeToken')
 
             this.$router.push('/')
